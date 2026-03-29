@@ -1,0 +1,237 @@
+:root {
+  --admin-primary: #1890ff;
+  --admin-accent: #722ed1;
+  --admin-bg: #f0f2f5;
+  --admin-header-bg: rgba(255, 255, 255, 0.85);
+  --admin-sider-bg: rgba(255, 255, 255, 0.85);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.06);
+  --text-bright: #1f2937;
+  --text-dim: #6b7280;
+}
+
+body {
+  margin: 0;
+  background-color: var(--admin-bg);
+  color: var(--text-bright);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+}
+
+/* Glassmorphism Helper */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+}
+
+/* Global Text Gradient Force Override */
+.text-gradient {
+  background: linear-gradient(135deg, var(--admin-primary) 0%, var(--admin-accent) 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* Ant Design Overrides */
+.ant-layout {
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%) !important;
+}
+
+.ant-layout-sider {
+  background: var(--admin-sider-bg) !important;
+  backdrop-filter: blur(20px);
+  border-right: 1px solid var(--glass-border);
+}
+
+.ant-layout-header {
+  background: var(--admin-header-bg) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 0 24px !important;
+  height: 64px !important;
+  line-height: 64px !important;
+}
+
+.ant-menu {
+  background: transparent !important;
+  border: none !important;
+}
+
+.ant-menu-item {
+  margin: 4px 8px !important;
+  border-radius: 8px !important;
+  color: var(--text-dim) !important;
+}
+
+.ant-menu-item-selected {
+  background: rgba(24, 144, 255, 0.1) !important;
+  color: var(--admin-primary) !important;
+}
+
+.ant-card {
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 12px !important;
+  color: var(--text-bright) !important;
+}
+
+.ant-card-head {
+  border-bottom: 1px solid var(--glass-border) !important;
+  color: var(--admin-primary) !important;
+  font-weight: 600 !important;
+}
+
+.ant-table {
+  background: transparent !important;
+  color: var(--text-bright) !important;
+}
+
+.ant-table-thead > tr > th {
+  background: rgba(0, 0, 0, 0.02) !important;
+  color: var(--admin-primary) !important;
+  border-bottom: 1px solid var(--glass-border) !important;
+}
+
+.ant-table-tbody > tr > td {
+  border-bottom: 1px solid var(--glass-border) !important;
+}
+
+.ant-table-row:hover > td {
+  background: rgba(0, 0, 0, 0.02) !important;
+}
+
+.ant-btn-primary {
+  background: linear-gradient(135deg, var(--admin-primary), var(--admin-accent)) !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.25) !important;
+}
+
+.ant-input, .ant-select-selector {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--text-bright) !important;
+}
+
+.ant-input-affix-wrapper {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+
+.ant-input-affix-wrapper > input.ant-input {
+  background: transparent !important;
+  color: var(--text-bright) !important;
+}
+
+/* Modal and Form Label Theme Overrides */
+.ant-modal-content {
+  background: var(--admin-header-bg) !important;
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+.ant-modal-header {
+  background: transparent !important;
+  border-bottom: 1px solid var(--glass-border) !important;
+}
+
+.ant-modal-title {
+  color: var(--text-bright) !important;
+}
+
+.ant-modal-close {
+  color: var(--text-dim) !important;
+}
+
+.ant-modal-close:hover {
+  color: var(--admin-primary) !important;
+}
+
+.ant-form-item-label > label {
+  color: var(--text-dim) !important;
+}
+
+.ant-radio-wrapper, .ant-checkbox-wrapper {
+  color: var(--text-bright) !important;
+}
+
+/* Dropdowns, Pickers and Cascaders Theme */
+.ant-select-dropdown, .ant-cascader-menus, .ant-picker-dropdown .ant-picker-panel-container, .ant-cascader-dropdown {
+  background: var(--admin-header-bg) !important;
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1) !important;
+}
+
+.ant-select-item, .ant-cascader-menu-item, .ant-picker-cell-inner, .ant-picker-time-panel-column > li .ant-picker-time-panel-cell-inner {
+  color: var(--text-bright) !important;
+}
+
+.ant-select-item-option-active, .ant-select-item-option-selected, .ant-cascader-menu-item-active, .ant-cascader-menu-item:hover, .ant-picker-cell:hover .ant-picker-cell-inner {
+  background: rgba(24, 144, 255, 0.1) !important;
+  color: var(--admin-primary) !important;
+}
+
+.ant-picker-time-panel-column > li.ant-picker-time-panel-cell-selected .ant-picker-time-panel-cell-inner {
+  background: rgba(24, 144, 255, 0.1) !important;
+}
+
+.ant-picker-time-panel-column > li .ant-picker-time-panel-cell-inner:hover {
+  background: rgba(0, 0, 0, 0.04) !important;
+}
+
+.ant-picker-header {
+  color: var(--text-bright) !important;
+  border-bottom: 1px solid var(--glass-border) !important;
+}
+
+.ant-picker-header button {
+  color: var(--text-dim) !important;
+}
+
+.ant-picker-header button:hover {
+  color: var(--admin-primary) !important;
+}
+
+.ant-picker-content th {
+  color: var(--text-dim) !important;
+}
+
+.ant-picker {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+
+.ant-picker-input > input {
+  color: var(--text-bright) !important;
+}
+
+.ant-picker-suffix, .ant-picker-clear, .ant-picker-separator {
+  color: var(--text-dim) !important;
+  background: transparent !important;
+}
+
+.ant-cascader {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+
+.ant-cascader-picker-label {
+  color: var(--text-bright) !important;
+}
