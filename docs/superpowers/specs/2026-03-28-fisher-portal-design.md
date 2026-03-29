@@ -505,12 +505,3 @@ CREATE TABLE banners (
 - mysql 数据库 127.0.0.1:fisher 账号/密码 root/1234567890
 - aliyun oss 账号 
 
-
-```
-endpoint: oss-cn-shenzhen.aliyuncs.com
-bucket 域名：sz-fisher.oss-cn-shenzhen.aliyuncs.com
-bucket: sz-fisher
-AccessKey: LTAI5tM7nrUeve2CpLjs8QTS
-AccessKey Secret: 6iCA8AqOAZGK3zFVE1NjsRkEWUucSy
-```
-
